@@ -4,3 +4,4 @@
 *~
 *.so
 deps/Arnold*
+/src/.emacs.desktop*

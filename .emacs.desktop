@@ -1,0 +1,43 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sun Oct 23 01:16:01 2016
+;; Desktop file format version 208
+;; Emacs version 25.1.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22539 62257 395901 602000) (desktop . "208") "marcel@arch-mr" nil nil ((((font-backend xft x) (font . "-MONO-Andale Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (font-parameter . "-monotype-Andale Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#657b83") (background-color . "#fdf6e3") (mouse-color . "#31363b") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground . "#31363b") (scroll-bar-background . "#31363b") (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . light) (cursor-color . "#657b83") (sticky) (environment) (frameset--id . "2F46-5072-45DB-1EA3") (frameset--mini t . t) (height . 54) (width . 160) (modeline . t) (minibuffer . t) (unsplittable) (left . 16) (top . 50) (icon-name) (visibility . t) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 80) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 16) (min-pixel-width-safe . 16)) leaf (pixel-width . 1312) (pixel-height . 848) (total-width . 164) (total-height . 53) (normal-height . 1.0) (normal-width . 1.0) (buffer "houdini.env" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 505) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/houdini15.5/houdini.env" ".." "."))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/marcel/houdini15.5/houdini.env"
+  "houdini.env"
+  'fundamental-mode
+  '(linum-mode company-mode projectile-mode)
+  505
+  '(480 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (545))))
+
+(desktop-create-buffer 208
+  "/home/marcel/Dropbox/mrAiVexVolumeProcedural/src/vexvolume.cpp"
+  "vexvolume.cpp"
+  'c++-mode
+  '(abbrev-mode linum-mode ggtags-mode company-mode flycheck-mode projectile-mode hs-minor-mode)
+  505
+  '(499 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (499 479 429 609 428 609 2616 2616 2616 2616 2616 150 428 609))))
+

@@ -1,0 +1,34 @@
+[node vexrgb]
+      desc STRING "VEX shader for Arnold"
+      c4d.classification STRING "texture"
+      c4d.menu STRING "texture"
+      maya.name STRING "vexrgb"
+      maya.classification STRING "utility/other"
+      maya.id INT 0x00116419
+      houdini.icon STRING "COP2_lookup"
+      houdini.category STRING "mr"
+      houdini.help_url STRING ""
+      houdini.order STRING "texture position radius"
+
+      [attr vexFile]
+            houdini.label STRING "VEX file"
+	    desc STRING "The vex file"
+            linkable BOOL FALSE
+	    c4d.gui_type INT 0
+	    houdini.type STRING "file:*.vfl"
+
+      [attr vexCode]
+            houdini.label STRING "VEX code"
+	    desc STRING "The vex code"
+            linkable BOOL FALSE
+	    c4d.gui_type INT 0
+
+      [attr vexSource]
+            houdini.label STRING "VEX source"
+            linkable BOOL FALSE
+            houdini.type STRING "menu:single:menu"
+            houdini.menu STRING "file;File;code;Code"
+            desc STRING "Source of VEX"
+            houdini.callback STRING "python:kwargs['node'].parm('vexCode').hide(kwargs['parm'].eval() != 'code'); kwargs['node'].parm('vexFile').hide(kwargs['parm'].eval() != 'file');"
+
+	
