@@ -1,0 +1,6 @@
+*.o
+*.exp
+*.lib
+*~
+*.so
+deps/Arnold*
