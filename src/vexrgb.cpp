@@ -1,5 +1,5 @@
 /*
- * solid texture shader
+ * CVEX shader for Arnold
  */
 
 #include <ai.h>
