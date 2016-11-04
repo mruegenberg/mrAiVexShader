@@ -2,6 +2,5 @@
 *.exp
 *.lib
 *~
-*.so
 deps/Arnold*
 /src/.emacs.desktop*
