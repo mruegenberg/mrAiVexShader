@@ -55,11 +55,6 @@ bool VexVolVolumePluginCreateVolume(
        // parse
        std::string bbox_scale_s = cfg_string.substr(0, space_pos);
        std::string fileName_s = cfg_string.substr(space_pos + 1);
-
-       AiMsgInfo(cfg_string.c_str());
-       AiMsgInfo("pos: %d", space_pos);
-       AiMsgInfo(bbox_scale_s.c_str());
-       AiMsgInfo(fileName_s.c_str());
        
        bbox_scale = std::stof(bbox_scale_s);
        strncpy(sphere_data->codeFilename, fileName_s.c_str(), fileName_s.length() + 1); // + 1 for 

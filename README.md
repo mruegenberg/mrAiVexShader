@@ -1,15 +1,14 @@
-# mrCumulo
-Arnold implementation of the Resolution Independent Volumes / Cumulo / SELMA approach by Tessendorf and Kowalski.
+# mrAiVEXShader
 
-Arnold version currently used: 4.2.13.0.
+CVEX shader and CVEX volume procedural for Arnold. Allows you to generate colors and volume density using the full power of Houdini's VEX language.
 
-## Building
-1. Open CMake and set the source dir to this folder
-2. Create a build folder in this folder and point the build dir in CMake there
-3. Click "Add Entry" in the CMake GUI and set `MTOA_BASE_DIR=O:\_software\plugins\maya\solidangle\mtoadeploy\2016`
-4. Click `Configure` and `Generate`. You get a Visual Studio solution on Windows
-5. Open the new VS solution
-  6. Change the build type to *Release* and right-click on Cumulo in the Solution Explorer and click *Set as StartUp project"
-7. Do *Build > Build Cumulo*
+## Prerequisites
+An installation of Houdini.
 
-This should generate a dll somewhere in `build/Release`. Copy the `test.ass` file to the same place and do `kick.exe test.ass` for a quick test.
+## Compilation
+1. Get the Arnold SDK for your system and Arnold version from [SolidAngle](https://www.solidangle.com/arnold/download/) and put it in `deps`.
+2. Adjust the path to match your Arnold SDK and Houdini versions in `compile.sh` / `compile.bat` (depending on your system, you just need to modify the .bat (Windows) or .sh (everywhere else))
+3. Run the script for your OS from the command line
+4. Copy the resulting `vexrgb.dll/.so/.dylib` and `vexrgb.mtd` file for to your `ARNOLD_PLUGIN_PATH` and the `vexvolume.dll/.so/.dylib` to the `dso` directory in your Arnold installation (or wherever your Arnold looks for procedurals).
+5. Install the HDAs to your Houdini (e.g by copying them to your `HOUDINI_PATH` or `HOUDINI_OTLSCAN_PATH`.
+6. Start Houdini with Arnold and have some fun. (It's theoretically  possible to use this without Houdini, but you will probably use it to author the CVEX shaders anyway.)
