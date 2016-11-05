@@ -24,4 +24,4 @@ Ng modulated by some Houdini noise:
 
 A fractal volume (quaternion Julia fractal) generated with a CVEX shader:
 
-![Juliabulb](samples/vexvolume.jpg)
+![Juliabulb](samples/vexvol.jpg)
