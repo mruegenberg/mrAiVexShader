@@ -29,6 +29,4 @@
             houdini.type STRING "menu:single:menu"
             houdini.menu STRING "file;File;code;Code"
             desc STRING "Source of VEX"
-            houdini.callback STRING "python:kwargs['node'].parm('vexCode').hide(kwargs['parm'].eval() != 'code'); kwargs['node'].parm('vexFile').hide(kwargs['parm'].eval() != 'file');"
-
 	

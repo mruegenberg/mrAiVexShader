@@ -12,3 +12,7 @@ An installation of Houdini.
 4. Copy the resulting `vexrgb.dll/.so/.dylib` and `vexrgb.mtd` file for to your `ARNOLD_PLUGIN_PATH` and the `vexvolume.dll/.so/.dylib` to the `dso` directory in your Arnold installation (or wherever your Arnold looks for procedurals).
 5. Install the HDAs to your Houdini (e.g by copying them to your `HOUDINI_PATH` or `HOUDINI_OTLSCAN_PATH`.
 6. Start Houdini with Arnold and have some fun. (It's theoretically  possible to use this without Houdini, but you will probably use it to author the CVEX shaders anyway.)
+
+## Examples
+Ng modulated by some Houdini noise:
+![Ng modulated by noise](samples/vexrgb.png)
