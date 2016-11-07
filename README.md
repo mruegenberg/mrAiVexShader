@@ -14,7 +14,13 @@ An installation of Houdini.
 5. Install the HDAs to your Houdini (e.g by copying them to your `HOUDINI_PATH` or `HOUDINI_OTLSCAN_PATH`.
 6. Start Houdini with Arnold and have some fun. (It's theoretically  possible to use this without Houdini, but you will probably use it to author the CVEX shaders anyway.)
 
-For the 
+# Usage
+
+Create a `Arnold VEX Volume` node in SOP level or a `Wrap VEX RGB` in an Arnold VOP network to create the volume procedural or shader respectively. Usage should be fairly straightworward, but note that you need to press the *Updated Node* button if you set a node as the VEX source and changed it for changes to propagate.
+
+The VEX RGB shader requires a vector output named *out*, the volume procedural expects a (float) *density* output.
+
+The `samples/sample.hip` file demonstrates the usage of both nodes. It will only work after pressing *Updated Node* on both `/obj/mr_vexvolume1` and `/shop/arnold_vopnet1/mr_wrapvexrgb1`.
 
 ## Examples
 Ng modulated by some Houdini noise:
