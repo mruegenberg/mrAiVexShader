@@ -93,7 +93,7 @@ node_loader
 
 shader_evaluate
 {
-    sg->out.RGB = AI_RGB_RED; // dummy
+    sg->out.RGB() = AI_RGB_RED; // dummy
 
     ShaderData* data = (ShaderData*) AiNodeGetLocalData(node);
 
@@ -140,7 +140,7 @@ shader_evaluate
 
         // user params
         AtArray *paramNames = AiShaderEvalParamArray(p_paramNames);
-        for(int i=0; i<paramNames->nelements; ++i) {
+        for(int i=0; i<AiArrayGetNumElements(paramNames); ++i) {
             const char *paramName = AiArrayGetStr(paramNames, i);
             ctx->addInput(paramName, CVEX_TYPE_FLOAT, false); // false = not varying = same for all pts
         }
@@ -227,13 +227,13 @@ shader_evaluate
     // user params
     AtArray *paramNames = AiShaderEvalParamArray(p_paramNames);
     AtArray *paramVals  = AiShaderEvalParamArray(p_paramValues);
-    std::vector<fpreal32> userFltBuffer(paramNames->nelements, 0.0f);                                        
+    std::vector<fpreal32> userFltBuffer(AiArrayGetNumElements(paramNames), 0.0f);                            
     {
-        int c = std::min(paramNames->nelements, paramVals->nelements);
+        int c = std::min(AiArrayGetNumElements(paramNames), AiArrayGetNumElements(paramVals));
         for(int i=0; i<c; ++i) {
             userFltBuffer[i] = AiArrayGetFlt(paramVals, i);
         }   
-        for(int i=0; i<paramNames->nelements; ++i) {
+        for(int i=0; i<AiArrayGetNumElements(paramNames); ++i) {
             const char *paramName = AiArrayGetStr(paramNames, i);
             CVEX_Value *param = ctx->findInput(paramName, CVEX_TYPE_FLOAT);
             if(param) {
@@ -251,6 +251,8 @@ shader_evaluate
 
     ctx->run(1, false);
 
-    sg->out.RGB = AiColorCreate((float)(out[0].x()),(float)(out[0].y()),(float)(out[0].z()));
+    sg->out.RGB().r = out[0].x();
+    sg->out.RGB().g = out[0].y();
+    sg->out.RGB().b = out[0].z();
 }
 
